@@ -1,5 +1,5 @@
 export EDITOR='vim'
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::" )
 alias l="ls -lahF"
 alias ll="ls -lhF"
 alias lc="locale"
